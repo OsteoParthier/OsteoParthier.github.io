@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="un.png" type="image/x-icon">
+    <title>Osteopathie in Langenhagen | Christine Parthier</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #394c60;
+            --button-color: #a38970;
+            --bg-color: #EFECE7;
+            --info-section-color: #6E7F91;
+        }
+        .btn-get{
+            background-color: #394c60;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+       
+    
+        .navbar-brand:hover {
+            color: var(--primary-color) !important;
+        }
+     
+        .nav-link {
+            color: #394c60;
+            font-size: 1rem;
+            padding: 0.5rem 1.2rem !important;
+        }
+        
+        .hero-section {
+            background-color: var(--bg-color);
+            padding: 8rem 0;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            max-width: 540px;
+            padding-right: 2rem;
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            font-family: 'Libre Baskerville', serif;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top:1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            font-family: 'Libre Baskerville', serif;
+        }
+        
+        .hero-text {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        .btn-get-started {
+            background-color: var(--button-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .btn-get-started:hover {
+            background-color: var(--button-color) !important;
+            color: white !important;
+        }
+
+        .hero-image-container {
+            width: 540px;
+            height: 600px;
+            overflow: hidden;
+            border-radius: 12px;
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .dropdown-menu {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 0.5rem 0;
+        }
+
+        .dropdown-item {
+            color: var(--primary-color);
+            padding: 0.5rem 1.5rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: transparent !important;
+            color: var(--primary-color) !important;
+        }
+
+        .osteopathie-section {
+            background-color: var(--info-section-color);
+            color: white;
+            padding: 6rem 0;
+        }
+
+        .osteopathie-title {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .osteopathie-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .info-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6rem 0;
+        }
+
+        footer {
+            background-color: #6E7F91;
+        }
+        .navbar {
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+.container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: var(--primary-color);
+    font-weight: 500;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.tele-brand {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+/* Extra large screens */
+@media (min-width: 1400px) {
+    .container-fluid {
+        padding: 0 2rem;
+    }
+}
+
+/* First breakpoint */
+@media (max-width: 1200px) {
+    .tele-brand {
+        display: none;
+    }
+    
+    .container-fluid {
+        justify-content: center;
+    }
+    
+    .navbar-content-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+/* Second breakpoint */
+@media (max-width: 992px) {
+    .container-fluid {
+        padding: 0 1rem;
+    }
+    
+    .navbar-brand span.location-text {
+        display: none;
+    }
+    
+    .navbar-brand {
+        font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+    }
+}
+
+/* Third breakpoint */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+    
+    .container-fluid {
+        padding: 0 0.5rem;
+    }
+    
+    img.navbar-logo {
+        height: 60px;
+        width: auto;
+        margin-right: 0.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-content-wrapper">
+                <img src="un.png" alt="Logo" class="navbar-logo" style="height: 80px; margin-right: 1rem;">
+                <a class="navbar-brand">
+                    <span class="location-text">Osteopathie in Langenhagen | </span>
+                    Christine Parthier
+                </a>
+            </div>
+            <a class="tele-brand" style="text-decoration: none;">0157 73 86 88 92</a>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">OsteoParthier</h1>
+                        <h2 class="hero-subtitle">Herzlich Willkommen!</h2>
+                        <p class="hero-text">Ab Januar 2025 finden Sie meine neuen Praxisräume 
+                            am Kaltenweider Platz 7b in Langenhagen/ Kaltenweide
+                            <br>-
+                            ein moderner und einladender Ort für Ihre Gesundheit und Wohlbefinden.
+                            <br><br>
+                            Ich freue mich, Ihnen dort ganzheitliche Behandlungen im Bereich der Osteopathie anbieten zu können. Gemeinsam arbeiten wir daran, Ihre Beschwerden zu lindern
+                            und Ihre Lebensqualität nachhaltig zu verbessern.
+                            <br><br>
+                            Termine können Sie ganz unkompliziert telefonisch 
+                            <br>oder per E-Mail vereinbaren.
+                            <br> Ich freue mich darauf, Sie bald in meiner Praxis begrüßen zu dürfen!
+                            <br><br>
+                            Christine Parthier <br>Osteopathin
+                        </p>
+                        <a href="mailto:praxis@osteoparthier.de" class="btn btn-get-started">Zur Online Terminvergabe</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <div class="hero-image-container">
+                        <img src="IMG_1241.jpg" alt="Interior Design" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="container text-center">
+            <p class="info-text">
+                Diese Website befindet sich derzeit noch im Aufbau. Bei Fragen können Sie mich gerne unter <a href="mailto:praxis@osteoparthier.de">praxis@osteopathie-parthier.de</a> kontaktieren.
+            </p>
+        </div>
+    </section>
+
+    <section class="anfahrt-section py-5" style="background-color: #ffffff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-lg-1">
+                    <div class="map-container" style="position: relative; width: 100%; height: 450px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.0876993468406!2d9.740261776676761!3d52.44493667205071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b00cf5aa540d65%3A0x88c227d8f4b3c04f!2sKaltenweider%20Pl.%207B%2C%2030853%20Langenhagen!5e0!3m2!1sde!2sde!4v1700243031762!5m2!1sde!2sde"
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2">
+                    <div class="directions-container">
+                       <br>
+                        <h2 class="hero-title mb-4">Anfahrt</h2>
+                        <div class="address-block mb-4">
+                            <h4 class="mb-3">Meine Adresse:</h4>
+                            <p style="color: var(--primary-color);">
+                                Kaltenweider Platz 7b<br>
+                                30853 Langenhagen
+                            </p>
+                        </div>
+                        <div class="directions-block mb-4">
+                            <h4 class="mb-3">Mit dem Auto:</h4>
+                            <p>
+                                Von der A2 kommend nehmen Sie die Ausfahrt Langenhagen. 
+                                Folgen Sie der Beschilderung Richtung Kaltenweide. 
+                                Das Gebäude befindet sich direkt am Kaltenweider Platz.
+                            </p>
+                        </div>
+                        <div class="transport-block mb-4">
+                            <h4 class="mb-3">Mit öffentlichen Verkehrsmitteln:</h4>
+                            <p>
+                                S-Bahn: S4 bis Langenhagen-Kaltenweide<br>
+                                Bus: Linie 480 bis Haltestelle Kaltenweider Platz
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3" style="font-family: 'Libre Baskerville', serif;">Kontakt</h5>
+                    <div class="text-white small">
+                        <p class="mb-1">Christine Parthier</p>
+                        <p class="mb-1">OsteoParthier,Praxis für Osteopathie</p>
+                        <p class="mb-1">Kaltenweider Platz 7b in Langenhagen/ Kaltenweide</p>
+                        <p class="mb-1">30855 Langenhagen</p>
+                        <p class="mb-1">Tel: 0157 73 86 88 92</p>
+                        <p class="mb-3">Email: praxis@osteoparthier.de</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-white mb-3" style="font-family: 'Libre Baskerville', serif;">Info</h5>
+                    <div class="d-flex flex-column">
+                        <a href="impressum.html" class="link-light small mb-2" style="text-decoration: none;">Impressum</a>
+                        <a href="Datenschutz.html" class="link-light small" style="text-decoration: none;">Datenschutz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
