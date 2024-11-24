@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="un.png" type="image/x-icon">
     <title>Osteopathie in Langenhagen | Christine Parthier</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -14,7 +13,20 @@
             --bg-color: #EFECE7;
             --info-section-color: #6E7F91;
         }
-        .btn-get{
+
+        .content-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .text-container {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .btn-get {
             background-color: #394c60;
             color: white;
             padding: 0.8rem 2rem;
@@ -22,18 +34,45 @@
             border-radius: 8px;
             font-size: 1rem;
         }
-       
-    
+
+        .navbar {
+            padding: 1.5rem 2rem;
+            background-color: white;
+            height: auto;
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
         .navbar-brand:hover {
             color: var(--primary-color) !important;
         }
-     
+
+        .navbar-toggler {
+            border-color: var(--primary-color);
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .tele-brand {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-align: right;
+            white-space: nowrap;
+        }
+        
         .nav-link {
-            color: #394c60;
+            color: var(--primary-color);
             font-size: 1rem;
             padding: 0.5rem 1.2rem !important;
         }
-        
+
         .hero-section {
             background-color: var(--bg-color);
             padding: 8rem 0;
@@ -41,12 +80,13 @@
             display: flex;
             align-items: center;
         }
-        
+
         .hero-content {
             max-width: 540px;
-            padding-right: 2rem;
+            margin: 0 auto;
+            text-align: left;
         }
-        
+
         .hero-title {
             font-size: 2.5rem;
             color: var(--primary-color);
@@ -58,7 +98,7 @@
         .hero-subtitle {
             font-size: 1.5rem;
             color: var(--primary-color);
-            margin-top:1rem;
+            margin-top: 1rem;
             margin-bottom: 0.5rem;
             font-weight: 400;
             font-family: 'Libre Baskerville', serif;
@@ -70,6 +110,7 @@
             line-height: 1.8;
             margin-bottom: 2rem;
         }
+
         .btn-get-started {
             background-color: var(--button-color);
             color: white;
@@ -90,7 +131,6 @@
             overflow: hidden;
             border-radius: 12px;
             position: relative;
-            margin-top: 2rem;
         }
 
         .hero-image {
@@ -100,156 +140,89 @@
             object-position: center;
         }
 
-        .dropdown-menu {
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 0.5rem 0;
-        }
-
-        .dropdown-item {
-            color: var(--primary-color);
-            padding: 0.5rem 1.5rem;
-        }
-
-        .dropdown-item:hover {
-            background-color: transparent !important;
-            color: var(--primary-color) !important;
-        }
-
-        .osteopathie-section {
-            background-color: var(--info-section-color);
-            color: white;
-            padding: 6rem 0;
-        }
-
-        .osteopathie-title {
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
-            font-weight: 500;
-            font-family: 'Libre Baskerville', serif;
-        }
-
-        .osteopathie-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
         .info-section {
             background-color: var(--primary-color);
             color: white;
-            padding: 6rem 0;
+            padding: 6rem 15px;
+        }
+
+        .anfahrt-section {
+            padding: 6rem 15px;
+            background-color: #ffffff;
+        }
+
+        .directions-container {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         footer {
             background-color: #6E7F91;
+            padding: 2rem 15px;
         }
-        .navbar {
-    padding: 1rem;
-    background-color: white;
-    border-bottom: 1px solid #eee;
-}
 
-.container-fluid {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
+        footer .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
 
-.navbar-brand {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
-    color: var(--primary-color);
-    font-weight: 500;
-    white-space: nowrap;
-    margin: 0;
-}
+        @media (max-width: 992px) {
+            .hero-section .row {
+                flex-direction: column-reverse;
+            }
 
-.tele-brand {
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-left: auto;
-    white-space: nowrap;
-}
+            .hero-content {
+                padding: 0 15px;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+            }
 
-/* Extra large screens */
-@media (min-width: 1400px) {
-    .container-fluid {
-        padding: 0 2rem;
-    }
-}
+            .hero-image-container {
+                width: 100%;
+                max-width: 540px;
+                height: 400px;
+                margin: 0 auto;
+                margin-top: -15%;
+            }
+            
+            .navbar {
+                padding: 1rem;
+            }
 
-/* First breakpoint */
-@media (max-width: 1200px) {
-    .tele-brand {
-        display: none;
-    }
-    
-    .container-fluid {
-        justify-content: center;
-    }
-    
-    .navbar-content-wrapper {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-}
+            .directions-container {
+                margin-top: 4rem;
+                margin-bottom: 1rem;
+            }
 
-/* Second breakpoint */
-@media (max-width: 992px) {
-    .container-fluid {
-        padding: 0 1rem;
-    }
-    
-    .navbar-brand span.location-text {
-        display: none;
-    }
-    
-    .navbar-brand {
-        font-size: clamp(1.1rem, 1.8vw, 1.3rem);
-    }
-}
-
-/* Third breakpoint */
-@media (max-width: 576px) {
-    .navbar {
-        padding: 0.5rem;
-    }
-    
-    .container-fluid {
-        padding: 0 0.5rem;
-    }
-    
-    img.navbar-logo {
-        height: 60px;
-        width: auto;
-        margin-right: 0.5rem;
-    }
-    
-    .navbar-brand {
-        font-size: 1.1rem;
-    }
-}
+            .hero-title {
+                margin-top: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-content-wrapper">
-                <img src="un.png" alt="Logo" class="navbar-logo" style="height: 80px; margin-right: 1rem;">
-                <a class="navbar-brand">
-                    <span class="location-text">Osteopathie in Langenhagen | </span>
-                    Christine Parthier
-                </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">OsteoParthier</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Osteopathie in Langenhagen | Christine Parthier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">0157 73 86 88 92</a>
+                    </li>
+                </ul>
             </div>
-            <a class="tele-brand" style="text-decoration: none;">0157 73 86 88 92</a>
         </div>
     </nav>
+
     <section class="hero-section">
-        <div class="container">
+        <div class="content-container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6">
                     <div class="hero-content">
@@ -282,15 +255,17 @@
     </section>
 
     <section class="info-section">
-        <div class="container text-center">
-            <p class="info-text">
-                Diese Website befindet sich derzeit noch im Aufbau. Bei Fragen können Sie mich gerne unter <a href="mailto:praxis@osteoparthier.de">praxis@osteopathie-parthier.de</a> kontaktieren.
-            </p>
+        <div class="content-container">
+            <div class="text-container">
+                <p class="info-text text-center">
+                    Diese Website befindet sich derzeit noch im Aufbau. Bei Fragen können Sie mich gerne unter <a href="mailto:praxis@osteoparthier.de">praxis@osteopathie-parthier.de</a> kontaktieren.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section class="anfahrt-section py-5" style="background-color: #ffffff;">
-        <div class="container">
+    <section class="anfahrt-section">
+        <div class="content-container">
             <div class="row">
                 <div class="col-lg-6 order-lg-1">
                     <div class="map-container" style="position: relative; width: 100%; height: 450px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
@@ -307,7 +282,6 @@
                 </div>
                 <div class="col-lg-6 order-lg-2">
                     <div class="directions-container">
-                       <br>
                         <h2 class="hero-title mb-4">Anfahrt</h2>
                         <div class="address-block mb-4">
                             <h4 class="mb-3">Meine Adresse:</h4>
@@ -337,8 +311,8 @@
         </div>
     </section>
 
-    <footer class="py-4 mt-auto">
-        <div class="container px-5">
+    <footer>
+        <div class="content-container">
             <div class="row">
                 <div class="col-md-6 mb-4 mb-md-0">
                     <h5 class="text-white mb-3" style="font-family: 'Libre Baskerville', serif;">Kontakt</h5>
@@ -363,6 +337,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
